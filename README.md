@@ -1,1 +1,71 @@
-# XAI_for_IOT_Anomaly_Detection_in_Smart_Homes_With_TinyLlama
+# XAI for IOT 
+## Anomaly Detection in Smart Homes With TinyLlama
+
+##  Overview
+
+This project implements an Explainable AI (XAI)–driven anomaly detection system for smart home IoT security using the CASAS dataset. A Random Forest model detects abnormal sensor activity, while SHAP  provide transparent feature-level explanations. A TinyLlama LLM further translates these insights into human-readable explanations, improving trust and interpretability in real-world IoT deployments.
+
+## 📊 Features
+
+- 📅 **Date Selection**: Choose any date to analyze
+- 📋 **Anomaly List**: View all anomalies detected on the selected date
+- 🎯 **Anomaly Selection**: Choose a specific anomaly to analyze
+- 🤖 **LLM Explanation**: Get detailed AI-powered analysis using TinyLlama
+- 📊 **SHAP Integration**: See which features contributed most to the anomaly classification
+- 📈 **Detailed Metrics**: View timestamps, activities, and confidence scores
+
+## 🎯 Usage
+
+1. Select a date using the date picker in the sidebar
+2. Click "Find Anomalies" to see all anomalies for that date
+3. Select an anomaly from the dropdown
+4. Click "Generate LLM Explanation" to get the analysis
+5. View the detailed report with LLM analysis and SHAP values
+
+##  Tech Stack
+
+| Component     | Tech                                      |
+|---------------|-------------------------------------------|
+| Frontend      | Streamlit                                 |
+| Backend       | Transformers                              |
+| Model         | RandomForest                              |
+| LLM           | TinyLlama-1.1B-Chat-v1.0                  |
+| Storage       | Temp local file storage for Dataset       |
+
+## 🛠️ Requirements
+
+- Python 3.7+
+- streamlit
+- pandas
+- transformers
+- torch
+- All dependencies from your notebook
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/DoctorGPT.git
+cd DoctorGPT
+```
+
+### 2. Install Backend Dependencies
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+```
+
+### 3. Run Frontend Application
+```bash
+streamlit run streamlit_app.py
+# Opens http://localhost:3000
+```
+
+##  License
+For educational and research use only.
+
+##  Acknowledgements
+- [TinyLlam](https://github.com/jzhang38/TinyLlama)  
+- [CASAS Dataset](https://zenodo.org/records/17180309)  
